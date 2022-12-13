@@ -37,7 +37,9 @@ public class RewardsController {
     @GetMapping("/Rewards/{id}")
     Customer getRewardsForSingleCustomer(@PathVariable Long id) {
         LOGGER.info("Getting rewards for the customer {}", id);
-        return customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
+        RewardsCalculatorUtil.calculateRewardsForCustomer(customer);
+        return customer;
     }
 
     @GetMapping("/transactions")

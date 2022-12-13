@@ -23,9 +23,9 @@ public class LoadDataToH2 {
     @Bean
     CommandLineRunner initDatabase(CustomerRepository customerRepository) {
         return args -> {
-            LOGGER.info("Preloading {}", customerRepository.save(generateCustomer("Jack")));
-            LOGGER.info("Preloading {}", customerRepository.save(generateCustomer("Jill")));
-            LOGGER.info("Preloading {}", customerRepository.save(generateCustomer("Bill")));
+            LOGGER.info("Preloading customer {}", customerRepository.save(generateCustomer("Jack")));
+            LOGGER.info("Preloading customer {}", customerRepository.save(generateCustomer("Jill")));
+            LOGGER.info("Preloading customer {}", customerRepository.save(generateCustomer("Bill")));
         };
     }
 

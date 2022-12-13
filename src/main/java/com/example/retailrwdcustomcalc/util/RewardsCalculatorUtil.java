@@ -17,7 +17,7 @@ public class RewardsCalculatorUtil {
         customers.forEach(RewardsCalculatorUtil::calculateRewardsForCustomer);
     }
 
-    private void calculateRewardsForCustomer(Customer customer) {
+    public void calculateRewardsForCustomer(Customer customer) {
         LOGGER.info("Calculating totalTransactions amount for {}", customer.getId());
         LOGGER.debug("All customer transactions : {}", customer.getTransactions());
 

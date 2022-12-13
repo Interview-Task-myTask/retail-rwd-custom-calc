@@ -32,7 +32,6 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -65,6 +64,7 @@
             <version>${junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

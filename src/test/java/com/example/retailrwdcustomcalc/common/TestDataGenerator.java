@@ -22,9 +22,17 @@ public class TestDataGenerator {
 
     public List<Transaction> generateTransactions(Customer customer) {
         List<Transaction> transactions = new ArrayList<>();
-        transactions.add(new Transaction(new BigDecimal((int) (Math.random() * 40) + 51), Date.valueOf(LocalDate.now()), customer));
-        transactions.add(new Transaction(new BigDecimal((int) (Math.random() * 100) + 1), Date.valueOf(LocalDate.of(2022, (int) (Math.random() * 10) + 1, (int) (Math.random() * 29) + 1)), customer));
-        transactions.add(new Transaction(new BigDecimal((int) (Math.random() * 100) + 1), Date.valueOf(LocalDate.of(2022, (int) (Math.random() * 10) + 1, (int) (Math.random() * 29) + 1)), customer));
+        transactions.add(new Transaction(new BigDecimal(150 ), Date.valueOf(LocalDate.now()), customer));
+        transactions.add(new Transaction(new BigDecimal(50 ), Date.valueOf(LocalDate.now()), customer));
+        transactions.add(new Transaction(new BigDecimal(30 ), Date.valueOf(LocalDate.now()), customer));
         return transactions;
+    }
+
+    public List<Customer> getCustomers() {
+        List<Customer> expected = new ArrayList<Customer>();
+        expected.add(TestDataGenerator.generateCustomer("King"));
+        expected.add(TestDataGenerator.generateCustomer("Queen"));
+        expected.add(TestDataGenerator.generateCustomer("Jack"));
+        return expected;
     }
 }
