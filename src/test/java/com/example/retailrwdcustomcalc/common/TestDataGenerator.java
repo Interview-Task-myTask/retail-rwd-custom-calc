@@ -29,7 +29,7 @@ public class TestDataGenerator {
     }
 
     public List<Customer> getCustomers() {
-        List<Customer> expected = new ArrayList<Customer>();
+        List<Customer> expected = new ArrayList<>();
         expected.add(TestDataGenerator.generateCustomer("King"));
         expected.add(TestDataGenerator.generateCustomer("Queen"));
         expected.add(TestDataGenerator.generateCustomer("Jack"));
