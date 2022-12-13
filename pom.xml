@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>retail-rwd-custom-calc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
     <name>retail-rwd-custom-calc</name>
     <description>Retailer custom rewards calculation</description>
