@@ -22,4 +22,4 @@ mvn spring-boot:run
 ## Tests
 The application contains test suite with unit, Integration and acceptance tests
 ~~~~
-mvn test
+mvn test -Dtest=!RetailRwdCustomCalcApplicationTests
